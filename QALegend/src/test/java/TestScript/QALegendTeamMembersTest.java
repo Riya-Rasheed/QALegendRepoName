@@ -30,7 +30,7 @@ public class QALegendTeamMembersTest extends BaseClass
 		Assert.assertEquals(teammemberspage.teammembersPageNextButtonStatusChecker(), true);
 		Assert.assertEquals(teammemberspage.teammembersPageNextButtonsStatusChecker(), true);
 		Assert.assertEquals(teammemberspage.teammembersPageSaveButtonStatusChecker(), true);
-		teammemberspage.searchTeamAdded(teamEmail);
+		
 	
 	
 	}

@@ -17,10 +17,10 @@ import org.testng.annotations.Parameters;
 import Constants.ConstantValues;
 import PageClasses.QALegendAnnouncementsPage;
 import PageClasses.QALegendClientsPage;
+import PageClasses.QALegendEditAnnouncementPage;
 import PageClasses.QALegendEditClientPage;
 import PageClasses.QALegendEditEventPage;
-
-
+import PageClasses.QALegendEditTeamMembersPage;
 import PageClasses.QALegendEventPage;
 import PageClasses.QALegendHomePage;
 
@@ -55,6 +55,8 @@ public class BaseClass
 	QALegendEditEventPage editeventpage;
 
 	QALegendProjectPage projectpage;
+	QALegendEditTeamMembersPage teampage;
+	QALegendEditAnnouncementPage annpage;
 	
 	
 	public Properties prop;
@@ -102,6 +104,8 @@ public class BaseClass
 		editeventpage = new QALegendEditEventPage(driver);
 		
 		projectpage = new QALegendProjectPage(driver);
+		teampage = new QALegendEditTeamMembersPage(driver);
+		annpage = new QALegendEditAnnouncementPage(driver);
 	}
 	
 	@AfterMethod

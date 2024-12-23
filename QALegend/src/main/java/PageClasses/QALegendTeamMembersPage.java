@@ -47,7 +47,7 @@ public class QALegendTeamMembersPage
 	WebElement passwordBox;
 	@FindBy(xpath = "//button[@class='btn btn-primary']")
 	WebElement saveButton;
-	@FindBy(xpath = "//input[@type='search']")
+	@FindBy(id = "")
 	WebElement searchButton;
 	
 	public QALegendTeamMembersPage(WebDriver driver) 
