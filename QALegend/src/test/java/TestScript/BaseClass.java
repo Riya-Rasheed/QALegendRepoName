@@ -18,21 +18,21 @@ import Constants.ConstantValues;
 import PageClasses.QALegendAnnouncementsPage;
 import PageClasses.QALegendClientsPage;
 import PageClasses.QALegendEditAnnouncementPage;
-import PageClasses.QALegendEditClientPage;
+
 import PageClasses.QALegendEditEventPage;
 import PageClasses.QALegendEditTeamMembersPage;
 import PageClasses.QALegendEventPage;
 import PageClasses.QALegendHomePage;
 
 import PageClasses.QALegendItemsPage;
-import PageClasses.QALegendLeavePage;
+
 import PageClasses.QALegendLoginPage;
 import PageClasses.QALegendMessagePage;
 import PageClasses.QALegendNotePage;
 import PageClasses.QALegendProjectPage;
 import PageClasses.QALegendTeamMembersPage;
 import PageClasses.QALegendTicketPage;
-import PageClasses.QALegendTimeCardsPage;
+
 import Utilities.ScreenshotUtility;
 
 public class BaseClass 
@@ -48,12 +48,7 @@ public class BaseClass
 	QALegendItemsPage itemspage;
 	QALegendAnnouncementsPage announcementpage;
 	QALegendTeamMembersPage teammemberspage;
-	QALegendLeavePage leavepage;
-	QALegendTimeCardsPage timecardspage;
-	
-	QALegendEditClientPage editclientpage;
 	QALegendEditEventPage editeventpage;
-
 	QALegendProjectPage projectpage;
 	QALegendEditTeamMembersPage teampage;
 	QALegendEditAnnouncementPage annpage;
@@ -97,10 +92,10 @@ public class BaseClass
 		itemspage = new QALegendItemsPage(driver);
 		announcementpage = new QALegendAnnouncementsPage(driver);
 		teammemberspage = new QALegendTeamMembersPage(driver);
-		leavepage = new QALegendLeavePage(driver);
-		timecardspage = new QALegendTimeCardsPage(driver);
+		
 	
-		editclientpage = new QALegendEditClientPage(driver);
+	
+		
 		editeventpage = new QALegendEditEventPage(driver);
 		
 		projectpage = new QALegendProjectPage(driver);
