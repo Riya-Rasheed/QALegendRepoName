@@ -225,6 +225,13 @@ public class PageUtilities
 		action.build().perform();
 		
 	}
+	public void pageDownKeyPress() {
+		
+		Actions action = new Actions(driver);
+		action.sendKeys(Keys.DOWN);
+		action.build().perform();
+		
+	}
 	
 	 
 	 

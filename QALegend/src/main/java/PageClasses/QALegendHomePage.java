@@ -38,6 +38,11 @@ public class QALegendHomePage
 	WebElement homepageProjectButton;
 	@FindBy(xpath = "//span[text()='All Projects']")
 	WebElement homepageAllProjectButton;
+	@FindBy(xpath = "//span[text()='Tickets']")
+	WebElement homepageTicketButton;
+	@FindBy(xpath = "//span[@class='topbar-user-name']")
+	WebElement CurrentUser;
+	
 	
 	public QALegendHomePage(WebDriver driver)
 	{
@@ -71,7 +76,11 @@ public class QALegendHomePage
 		homePageNoteButton.click();
 	}
 
-
+	public String findLoggedUser()
+	{
+		String loggedusername = pageutilities.readText(CurrentUser);
+		return loggedusername;
+	}
 
 
 
@@ -142,5 +151,9 @@ public class QALegendHomePage
 		homepageAllProjectButton.click();
 	}
 
-
+	public void clickOnHomePageTicketButton()
+	{
+		homepageTicketButton.click();
+	}
+	
 }

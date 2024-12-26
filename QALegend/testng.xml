@@ -21,6 +21,7 @@
 	<class name="TestScript.QALegendEditAnnouncementTest"/>
        <class name="TestScript.QALegendTeamMembersTest"/>
        <class name="TestScript.QALegendEditTeamMembersTest"/>
+       <class name="TestScript.QALegendTicketTest"/>
 <!-- 	<class name="TestScript.QALegendLeaveTest"/>-->
 <!-- 	<class name="TestScript.QALegendTimeCardsTest"/>-->
  	<class name="TestScript.QALegendLoginTest" />

@@ -31,7 +31,7 @@ import PageClasses.QALegendMessagePage;
 import PageClasses.QALegendNotePage;
 import PageClasses.QALegendProjectPage;
 import PageClasses.QALegendTeamMembersPage;
-
+import PageClasses.QALegendTicketPage;
 import PageClasses.QALegendTimeCardsPage;
 import Utilities.ScreenshotUtility;
 
@@ -57,7 +57,7 @@ public class BaseClass
 	QALegendProjectPage projectpage;
 	QALegendEditTeamMembersPage teampage;
 	QALegendEditAnnouncementPage annpage;
-	
+	QALegendTicketPage ticketpage;
 	
 	public Properties prop;
 	public FileInputStream fis;
@@ -106,6 +106,7 @@ public class BaseClass
 		projectpage = new QALegendProjectPage(driver);
 		teampage = new QALegendEditTeamMembersPage(driver);
 		annpage = new QALegendEditAnnouncementPage(driver);
+		ticketpage = new QALegendTicketPage(driver);
 	}
 	
 	@AfterMethod
