@@ -10,7 +10,7 @@ import Utilities.FakerUtility;
 
 public class QALegendEditEventTest extends BaseClass
 {
-	@Test
+	@Test(retryAnalyzer = TestScript.RetryAnalyzer.class)
 	public void editEventTestCases() throws IOException
 	{
 		loginpage.login(prop.getProperty("username"), prop.getProperty("password"));

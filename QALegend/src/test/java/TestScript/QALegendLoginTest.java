@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import Utilities.ExcelUtility;
 
 public class QALegendLoginTest extends BaseClass
-{	@Test
+{	@Test(retryAnalyzer = TestScript.RetryAnalyzer.class)
 	public void checkValidLogin()
 	{
 		

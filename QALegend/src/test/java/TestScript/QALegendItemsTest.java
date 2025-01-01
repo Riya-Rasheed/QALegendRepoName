@@ -10,7 +10,7 @@ import Utilities.FakerUtility;
 
 public class QALegendItemsTest extends BaseClass
 {
-	@Test
+	@Test(retryAnalyzer = TestScript.RetryAnalyzer.class)
 	public void addItem() throws IOException, InterruptedException 
 	{
 		loginpage.login(prop.getProperty("username"), prop.getProperty("password"));

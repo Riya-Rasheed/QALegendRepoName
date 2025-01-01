@@ -10,7 +10,7 @@ import Utilities.FakerUtility;
 
 public class QALegendClientsTest extends BaseClass
 {
-	@Test(groups = {"Regression"})
+	@Test(groups = {"Regression"},retryAnalyzer = TestScript.RetryAnalyzer.class)
 	public void addClients() throws IOException, InterruptedException
 	{
 		loginpage.login(prop.getProperty("username"), prop.getProperty("password"));

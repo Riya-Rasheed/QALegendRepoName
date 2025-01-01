@@ -9,7 +9,7 @@ import Utilities.ExcelUtility;
 
 public class QALegendEditAnnouncementTest extends BaseClass 
 {
-	@Test
+	@Test(retryAnalyzer = TestScript.RetryAnalyzer.class)
 	public void editannouncementTestCases() throws IOException
 	{
 		loginpage.login(prop.getProperty("username"), prop.getProperty("password"));

@@ -10,7 +10,7 @@ import Utilities.FakerUtility;
 
 public class QALegendAnnouncementTest extends BaseClass
 {
-	@Test(groups = {"smoke"})
+	@Test(groups = {"smoke"},retryAnalyzer = TestScript.RetryAnalyzer.class)
 	public void addAnnouncement() throws IOException
 	{
 		loginpage.login(prop.getProperty("username"), prop.getProperty("password"));

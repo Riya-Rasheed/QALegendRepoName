@@ -51,15 +51,11 @@ public class QALegendHomePage
 		PageFactory.initElements(driver, this);
 	}
 	
-	
-	
-	
-	public void clickOnHomePageEventButton()
+	public QALegendHomePage clickOnHomePageEventButton()
 	{
 		homePageEventButton.click();
+		return this;
 	}
-
-
 
 
 	public Boolean checkforProfileName() 
@@ -67,13 +63,11 @@ public class QALegendHomePage
 		return pageutilities.isElementDisplayed(profileName);
 	}
 
-
-
-	
-	public void clickOnHomePageNoteButton()
+	public QALegendHomePage clickOnHomePageNoteButton()
 	{
 		
 		homePageNoteButton.click();
+		return this;
 	}
 
 	public String findLoggedUser()
@@ -85,43 +79,48 @@ public class QALegendHomePage
 
 
 
-	public void clickOnHomePageMessageButton() 
+	public QALegendHomePage clickOnHomePageMessageButton() 
 	{
 		
 		homePageMessageButton.click();
+		return this;
 		
 	}
 
 
 
 
-	public void clickOnHomePageClientsButton() 
+	public QALegendHomePage clickOnHomePageClientsButton() 
 	{
 		
 		homePageClientsButton.click();
+		return this;
 	}
 	
 	
-	public void clickOnHomePageItemsButton() 
+	public QALegendHomePage clickOnHomePageItemsButton() 
 	{
 		
 		
 		homePageItemsButton.click();
+		return this;
 	}
 	
 	
 	
 	
-	public void clickOnHomePageAnnouncementButton()
+	public QALegendHomePage clickOnHomePageAnnouncementButton()
 	{
 		homepageAnnouncementButton.click();
+		return this;
 	}
 	
 	
-	public void clickOnHomePageTeamMembersButton()
+	public QALegendHomePage clickOnHomePageTeamMembersButton()
 	{
 		
 		homepageTeamMembersButton.click();
+		return this;
 	}
 	
 	public void clickOnHomePageLeaveButton()

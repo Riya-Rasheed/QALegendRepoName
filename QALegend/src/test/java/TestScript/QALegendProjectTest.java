@@ -10,7 +10,7 @@ import Utilities.FakerUtility;
 
 public class QALegendProjectTest extends BaseClass 
 {
-	@Test
+	@Test(retryAnalyzer = TestScript.RetryAnalyzer.class)
 	public void verifyAddProject() throws IOException, InterruptedException 
 	{
 		loginpage.login(prop.getProperty("username"),prop.getProperty("password"));
