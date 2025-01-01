@@ -2,6 +2,7 @@ package TestScript;
 
 import java.io.IOException;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import Utilities.ExcelUtility;
@@ -20,5 +21,6 @@ public class QALegendProjectTest extends BaseClass
 		String prjdescription=ExcelUtility.getStringData(1, 1, "Project");
 		projectpage.addProject(prjtitle, prjdescription);
 		projectpage.searchProjectadded(prjtitle);
+		Assert.assertEquals(projectpage.projectPageSaveButtonStatusChecker(), true);
 	}
 }

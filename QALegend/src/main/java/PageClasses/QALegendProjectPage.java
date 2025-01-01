@@ -89,6 +89,14 @@ public class QALegendProjectPage
 		pageutilities.clickOnElement(savebtn);
 
 	}
+	
+	public boolean projectPageSaveButtonStatusChecker() 
+	{
+		
+		return(pageutilities.isElementEnabled(srchbox));
+	}
+	
+	
 
 	public void searchProjectadded(String title) throws InterruptedException
 

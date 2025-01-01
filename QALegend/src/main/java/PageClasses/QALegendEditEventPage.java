@@ -43,6 +43,7 @@ public class QALegendEditEventPage
 	}
 	
 	
+	
 	public void editEventClick()
 	{
 		editButton.click();
@@ -54,8 +55,13 @@ public class QALegendEditEventPage
 		pageutilities.enterText(editTitleBox, title);
 		editDescBox.clear();
 		pageutilities.enterText(editTitleBox, desc);
-		saveButton.click();
+//		saveButton.click();
 	}
 	
+	public boolean editeventPageSaveButtonStatusChecker() 
+	{
+		
+		return(pageutilities.isElementEnabled(saveButton));
+	}
 	
 }

@@ -48,6 +48,17 @@ public class QALegendMessagePage
 		
 	}	
 	
+	public boolean messagePageSearchButtonStatusChecker() 
+	{
+		
+		return(pageutilities.isElementEnabled(searchtxtbox));
+	}
+	
+//	public void sendButton()
+//	{
+//		pageutilities.clickOnElement(sendbutton);
+//	}
+	
 	public void getMessageOnSentItems(String str) throws InterruptedException
 	{
 		pageutilities.javaScriptClick(sentitems);

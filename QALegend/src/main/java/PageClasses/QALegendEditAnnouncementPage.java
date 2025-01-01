@@ -23,6 +23,12 @@ public class QALegendEditAnnouncementPage
 		this.pageutilities = new PageUtilities(driver);
 		PageFactory.initElements(driver, this);
 	}
+	
+	public boolean editannouncementPageSearchButtonStatusChecker() 
+	{
+		
+		return(pageutilities.isElementEnabled(searchBox));
+	}
 
 	
 	public void searchAnnouncement(String announcement)

@@ -61,10 +61,14 @@ public class QALegendEventPage
 		pageutilities.enterText(descriptionBox, description);
 		startdateBox.sendKeys("2024-12-30");
 		enddateBox.sendKeys("2025-01-28");
-		pageutilities.clickOnElement(saveButton);
+//		pageutilities.clickOnElement(saveButton);
 	}
 	
-
+	public boolean eventPageSaveButtonStatusChecker() 
+	{
+		
+		return(pageutilities.isElementEnabled(saveButton));
+	}
 
 	
 

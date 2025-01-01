@@ -2,6 +2,7 @@ package TestScript;
 
 import java.io.IOException;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import Utilities.ExcelUtility;
@@ -20,6 +21,8 @@ public class QALegendEditEventTest extends BaseClass
 		editeventpage.searchEvent(searchEventTitle);
 		editeventpage.editEventClick();
 		editeventpage.editEvent(editTitle, editDescription);
+		Assert.assertEquals(editeventpage.editeventPageSaveButtonStatusChecker(), true);
+		
 	}
 	
 	

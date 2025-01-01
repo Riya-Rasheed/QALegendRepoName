@@ -21,7 +21,7 @@ public class QALegendEventTest extends BaseClass
 		String eventTitle = ExcelUtility.getStringData(1, 0, "Sheet1")+FakerUtility.randomNumberGenerator();
 		String eventDescription = ExcelUtility.getStringData(1, 1,"Sheet1" );
 		eventpage.addEvent(eventTitle, eventDescription);
-		
+		Assert.assertEquals(eventpage.eventPageSaveButtonStatusChecker(), true);
 		
 	}
 

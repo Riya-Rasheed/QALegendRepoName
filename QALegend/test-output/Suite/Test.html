@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>14/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Dec 26 11:55:08 IST 2024</td>
+<td>Started on:</td><td>Wed Jan 01 19:36:41 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>77 seconds (77756 ms)</td>
+<tr><td>Total time:</td><td>12 seconds (12277 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,16 +76,16 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='TestScript.QALegendItemsTest.addItem()'><b>addItem</b><br>Test class: TestScript.QALegendItemsTest</td>
-<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;input type=&quot;search&quot; class=&quot;&quot; placeholder=&quot;Search&quot; aria-controls=&quot;item-table&quot;&gt; is not clickable at point (900, 156). Other element would receive the click: &lt;div class=&quot;modal in&quot; id=&quot;ajaxModal&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot; aria-labelledby=&quot;ajaxModal&quot; aria-hidden=&quot;true&quot; style=&quot;display: block;&quot;&gt;...&lt;/div&gt;
+<td title='TestScript.QALegendLoginTest.checkValidLogin()'><b>checkValidLogin</b><br>Test class: TestScript.QALegendLoginTest</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;alert alert-danger&apos;]&quot;}
   (Session info: chrome=131.0.6778.205)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [598665ca7997fe7f05578e55b5e1add3, clickElement {id=f.14777666A27440327820EE970ACFAB5A.d.7B083AB859D789CC695FA12795EB9EFD.e.56}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.205, chrome: {chromedriverVersion: 131.0.6778.204 (52183f9e99a..., userDataDir: C:\Users\hanzh\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51153}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51153/devtoo..., se:cdpVersion: 131.0.6778.205, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (598665ca7997fe7f05578e55b5e1add3)] -&gt; xpath: //input[@type=&apos;search&apos;]]
-Session ID: 598665ca7997fe7f05578e55b5e1add3
+Command: [57a96644486c72b2294f78d864d0d86f, findElement {value=//div[@class=&apos;alert alert-danger&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.205, chrome: {chromedriverVersion: 131.0.6778.204 (52183f9e99a..., userDataDir: C:\Users\hanzh\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57457}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57457/devtoo..., se:cdpVersion: 131.0.6778.205, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 57a96644486c72b2294f78d864d0d86f
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -93,23 +93,27 @@ Session ID: 598665ca7997fe7f05578e55b5e1add3
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy12.click(Unknown Source)
-	at PageClasses.QALegendItemsPage.searchItemAdded(QALegendItemsPage.java:60)
-	at TestScript.QALegendItemsTest.addItem(QALegendItemsTest.java:23)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy12.isDisplayed(Unknown Source)
+	at Utilities.PageUtilities.isElementDisplayed(PageUtilities.java:165)
+	at PageClasses.QALegendLoginPage.checkforInvalidLogin(QALegendLoginPage.java:49)
+	at TestScript.QALegendLoginTest.checkValidLogin(QALegendLoginTest.java:16)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1506856374", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1506856374'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;input type=&quot;search&quot; class=&quot;&quot; placeholder=&quot;Search&quot; aria-controls=&quot;item-table&quot;&gt; is not clickable at point (900, 156). Other element would receive the click: &lt;div class=&quot;modal in&quot; id=&quot;ajaxModal&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot; aria-labelledby=&quot;ajaxModal&quot; aria-hidden=&quot;true&quot; style=&quot;display: block;&quot;&gt;...&lt;/div&gt;
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1855112877", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1855112877'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;alert alert-danger&apos;]&quot;}
   (Session info: chrome=131.0.6778.205)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [598665ca7997fe7f05578e55b5e1add3, clickElement {id=f.14777666A27440327820EE970ACFAB5A.d.7B083AB859D789CC695FA12795EB9EFD.e.56}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.205, chrome: {chromedriverVersion: 131.0.6778.204 (52183f9e99a..., userDataDir: C:\Users\hanzh\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51153}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51153/devtoo..., se:cdpVersion: 131.0.6778.205, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (598665ca7997fe7f05578e55b5e1add3)] -&gt; xpath: //input[@type=&apos;search&apos;]]
-Session ID: 598665ca7997fe7f05578e55b5e1add3
+Command: [57a96644486c72b2294f78d864d0d86f, findElement {value=//div[@class=&apos;alert alert-danger&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.205, chrome: {chromedriverVersion: 131.0.6778.204 (52183f9e99a..., userDataDir: C:\Users\hanzh\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57457}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57457/devtoo..., se:cdpVersion: 131.0.6778.205, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 57a96644486c72b2294f78d864d0d86f
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -120,14 +124,16 @@ Session ID: 598665ca7997fe7f05578e55b5e1add3
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy12.click(Unknown Source)
-	at PageClasses.QALegendItemsPage.searchItemAdded(QALegendItemsPage.java:60)
-	at TestScript.QALegendItemsTest.addItem(QALegendItemsTest.java:23)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy12.isDisplayed(Unknown Source)
+	at Utilities.PageUtilities.isElementDisplayed(PageUtilities.java:165)
+	at PageClasses.QALegendLoginPage.checkforInvalidLogin(QALegendLoginPage.java:49)
+	at TestScript.QALegendLoginTest.checkValidLogin(QALegendLoginTest.java:16)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -155,8 +161,8 @@ Session ID: 598665ca7997fe7f05578e55b5e1add3
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>3</td>
-<td>TestScript.QALegendItemsTest@455b6df1</td></tr>
+<td>6</td>
+<td>TestScript.QALegendLoginTest@7e19ebf0</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -167,75 +173,10 @@ Session ID: 598665ca7997fe7f05578e55b5e1add3
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='TestScript.QALegendAnnouncementTest.addAnnouncement()'><b>addAnnouncement</b><br>Test class: TestScript.QALegendAnnouncementTest</td>
-<td></td>
-<td>2</td>
-<td>TestScript.QALegendAnnouncementTest@4ddbbdf8</td></tr>
-<tr>
-<td title='TestScript.QALegendMessageTest.verifyComposeMessage()'><b>verifyComposeMessage</b><br>Test class: TestScript.QALegendMessageTest</td>
-<td></td>
-<td>3</td>
-<td>TestScript.QALegendMessageTest@768fc0f2</td></tr>
-<tr>
-<td title='TestScript.QALegendTicketTest.verifyTicketMarkedAsClosed()'><b>verifyTicketMarkedAsClosed</b><br>Test class: TestScript.QALegendTicketTest</td>
-<td></td>
-<td>5</td>
-<td>TestScript.QALegendTicketTest@14bee915</td></tr>
-<tr>
 <td title='TestScript.QALegendLoginTest.checkinValidLogin()'><b>checkinValidLogin</b><br>Test class: TestScript.QALegendLoginTest</td>
 <td></td>
 <td>1</td>
-<td>TestScript.QALegendLoginTest@1115ec15</td></tr>
-<tr>
-<td title='TestScript.QALegendEditAnnouncementTest.editannouncementTestCases()'><b>editannouncementTestCases</b><br>Test class: TestScript.QALegendEditAnnouncementTest</td>
-<td></td>
-<td>1</td>
-<td>TestScript.QALegendEditAnnouncementTest@3f67593e</td></tr>
-<tr>
-<td title='TestScript.QALegendEditTeamMembersTest.editTeamTestCases()'><b>editTeamTestCases</b><br>Test class: TestScript.QALegendEditTeamMembersTest</td>
-<td></td>
-<td>1</td>
-<td>TestScript.QALegendEditTeamMembersTest@41ab013</td></tr>
-<tr>
-<td title='TestScript.QALegendEventTest.addEvent()'><b>addEvent</b><br>Test class: TestScript.QALegendEventTest</td>
-<td></td>
-<td>2</td>
-<td>TestScript.QALegendEventTest@10f7f7de</td></tr>
-<tr>
-<td title='TestScript.QALegendProjectTest.verifyAddProject()'><b>verifyAddProject</b><br>Test class: TestScript.QALegendProjectTest</td>
-<td></td>
-<td>4</td>
-<td>TestScript.QALegendProjectTest@20c0a64d</td></tr>
-<tr>
-<td title='TestScript.QALegendNoteTest.addNoteTest()'><b>addNoteTest</b><br>Test class: TestScript.QALegendNoteTest</td>
-<td></td>
-<td>3</td>
-<td>TestScript.QALegendNoteTest@71329995</td></tr>
-<tr>
-<td title='TestScript.QALegendClientsTest.addClients()'><b>addClients</b><br>Test class: TestScript.QALegendClientsTest</td>
-<td></td>
-<td>4</td>
-<td>TestScript.QALegendClientsTest@5454d35e</td></tr>
-<tr>
-<td title='TestScript.QALegendLoginTest.checkValidLogin()'><b>checkValidLogin</b><br>Test class: TestScript.QALegendLoginTest</td>
-<td></td>
-<td>1</td>
-<td>TestScript.QALegendLoginTest@1115ec15</td></tr>
-<tr>
-<td title='TestScript.QALegendTeamMembersTest.addTeamMembers()'><b>addTeamMembers</b><br>Test class: TestScript.QALegendTeamMembersTest</td>
-<td></td>
-<td>3</td>
-<td>TestScript.QALegendTeamMembersTest@1ab06251</td></tr>
-<tr>
-<td title='TestScript.QALegendEditEventTest.editEventTestCases()'><b>editEventTestCases</b><br>Test class: TestScript.QALegendEditEventTest</td>
-<td></td>
-<td>2</td>
-<td>TestScript.QALegendEditEventTest@119cbf96</td></tr>
-<tr>
-<td title='TestScript.QALegendTicketTest.verifyTicketAssignment()'><b>verifyTicketAssignment</b><br>Test class: TestScript.QALegendTicketTest</td>
-<td></td>
-<td>7</td>
-<td>TestScript.QALegendTicketTest@14bee915</td></tr>
+<td>TestScript.QALegendLoginTest@7e19ebf0</td></tr>
 </table><p>
 </body>
 </html>

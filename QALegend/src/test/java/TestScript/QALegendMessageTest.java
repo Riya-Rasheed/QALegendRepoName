@@ -2,6 +2,7 @@ package TestScript;
 
 import java.io.IOException;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import Utilities.ExcelUtility;
@@ -18,6 +19,8 @@ public class QALegendMessageTest extends BaseClass
 			String messagearea=ExcelUtility.getStringData(1, 2, "Messages");
 			messagepage.addMessage(Tomailid, subject, messagearea);
 			messagepage.getMessageOnSentItems(subject);
+			Assert.assertEquals(messagepage.messagePageSearchButtonStatusChecker(), true);
+//			messagepage.sendButton();
 	}
 	
 }

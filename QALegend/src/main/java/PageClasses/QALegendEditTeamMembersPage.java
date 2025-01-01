@@ -24,6 +24,12 @@ public class QALegendEditTeamMembersPage
 		PageFactory.initElements(driver, this);
 	}
 
+	public boolean editteamPageSearchButtonStatusChecker() 
+	{
+		
+		return(pageutilities.isElementEnabled(searchBox));
+	}
+	
 	public void searchTeamAdded(String name)
 	{
 	    WaitUtility.waitForClickingElement(driver, searchBox);
