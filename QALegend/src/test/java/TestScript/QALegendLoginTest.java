@@ -14,9 +14,10 @@ public class QALegendLoginTest extends BaseClass
 		
 		loginpage.login(prop.getProperty("username"),prop.getProperty("password"));
 		Assert.assertEquals(homepage.checkforProfileName(), true);
+		System.out.println("User is Valid");
 		
 	}
-	@Test
+	@Test(retryAnalyzer = TestScript.RetryAnalyzer.class)
 	public void checkinValidLogin() throws IOException
 	{
 		System.out.println("invalid");

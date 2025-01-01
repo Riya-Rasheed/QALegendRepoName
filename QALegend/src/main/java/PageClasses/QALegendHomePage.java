@@ -13,7 +13,7 @@ public class QALegendHomePage
 	public PageUtilities pageutilities;
 	@FindBy(xpath = "//span[text()='Events']")
 	WebElement homePageEventButton;
-	@FindBy(xpath = "//span[text()='Lekshmi Nair']")
+	@FindBy(xpath = "//span[text()='Megha Rajeev']")
 	WebElement profileName;
 	
 	@FindBy(xpath = "//span[text()='Notes']")

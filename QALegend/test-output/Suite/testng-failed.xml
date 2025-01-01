@@ -10,6 +10,7 @@
       <class name="TestScript.QALegendLoginTest">
         <methods>
           <include name="browserintialization"/>
+          <include name="checkinValidLogin"/>
           <include name="checkValidLogin"/>
           <include name="afterMethod"/>
         </methods>
