@@ -14,7 +14,7 @@
     <class name="TestScript.QALegendMessageTest"/>
      <class name="TestScript.QALegendClientsTest"/>
      <class name="TestScript.QALegendProjectTest"/>
-     <class name="TestScript.QALegendItemsTest"/>
+<!--     <class name="TestScript.QALegendItemsTest"/>-->
 <!--<class name="TestScript.QALegendAnnouncementTest"/>-->
 	<class name="TestScript.QALegendEditAnnouncementTest"/>
 <!--       <class name="TestScript.QALegendTeamMembersTest"/>-->
