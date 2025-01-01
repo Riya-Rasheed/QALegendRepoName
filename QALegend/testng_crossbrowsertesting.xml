@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite">
+<listeners>
+<listener class-name="Listeners.Listener">
+</listener>
+</listeners>
+<parameter name="browser" value="chrome"></parameter>
+  <test thread-count="4" name="Test">
+    <classes>
+   
+  	<class name="TestScript.QALegendEventTest"/>
+  	<class name = "TestScript.QALegendEditEventTest"/>
+<class name="TestScript.QALegendNoteTest"/>
+    <class name="TestScript.QALegendMessageTest"/>
+     <class name="TestScript.QALegendClientsTest"/>
+     <class name="TestScript.QALegendProjectTest"/>
+     <class name="TestScript.QALegendItemsTest"/>
+<class name="TestScript.QALegendAnnouncementTest"/>
+	<class name="TestScript.QALegendEditAnnouncementTest"/>
+       <class name="TestScript.QALegendTeamMembersTest"/>
+       <class name="TestScript.QALegendEditTeamMembersTest"/>
+       <class name="TestScript.QALegendTicketTest"/>
+ 	<class name="TestScript.QALegendLoginTest" />
+
+	 
+    </classes>
+  </test> 
+  <parameter name="browser" value="Firefox"></parameter>
+  <test thread-count="4" name="Test">
+    <classes>
+   
+  	<class name="TestScript.QALegendEventTest"/>
+  	<class name = "TestScript.QALegendEditEventTest"/>
+<class name="TestScript.QALegendNoteTest"/>
+    <class name="TestScript.QALegendMessageTest"/>
+     <class name="TestScript.QALegendClientsTest"/>
+     <class name="TestScript.QALegendProjectTest"/>
+     <class name="TestScript.QALegendItemsTest"/>
+<class name="TestScript.QALegendAnnouncementTest"/>
+	<class name="TestScript.QALegendEditAnnouncementTest"/>
+       <class name="TestScript.QALegendTeamMembersTest"/>
+       <class name="TestScript.QALegendEditTeamMembersTest"/>
+       <class name="TestScript.QALegendTicketTest"/>
+ 	<class name="TestScript.QALegendLoginTest" />
+
+	 
+    </classes>
+  </test> 
+  <parameter name="browser" value="Edge"></parameter>
+  <test thread-count="4" name="Test">
+    <classes>
+   
+  	<class name="TestScript.QALegendEventTest"/>
+  	<class name = "TestScript.QALegendEditEventTest"/>
+<class name="TestScript.QALegendNoteTest"/>
+    <class name="TestScript.QALegendMessageTest"/>
+     <class name="TestScript.QALegendClientsTest"/>
+     <class name="TestScript.QALegendProjectTest"/>
+     <class name="TestScript.QALegendItemsTest"/>
+<class name="TestScript.QALegendAnnouncementTest"/>
+	<class name="TestScript.QALegendEditAnnouncementTest"/>
+       <class name="TestScript.QALegendTeamMembersTest"/>
+       <class name="TestScript.QALegendEditTeamMembersTest"/>
+       <class name="TestScript.QALegendTicketTest"/>
+ 	<class name="TestScript.QALegendLoginTest" />
+
+	 
+    </classes>
+  </test> 
+</suite>  

@@ -9,7 +9,7 @@ import Utilities.ExcelUtility;
 
 public class QALegendMessageTest extends BaseClass
 {
-	@Test
+	@Test(groups = {"smoke"})
 	public void verifyComposeMessage() throws IOException, InterruptedException
 	{
 			loginpage.login(prop.getProperty("username"),prop.getProperty("password"));

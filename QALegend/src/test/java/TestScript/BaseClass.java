@@ -57,7 +57,7 @@ public class BaseClass
 	public Properties prop;
 	public FileInputStream fis;
 	String browserName = "chrome";
-	@BeforeMethod(alwaysRun = true)
+	@BeforeMethod(alwaysRun = true,groups = {"smoke","Sanity","Regression"})
 	
 	public void browserintialization() throws Exception 
 	{

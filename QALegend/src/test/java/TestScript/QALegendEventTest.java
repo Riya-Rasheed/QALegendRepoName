@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 
 public class QALegendEventTest extends BaseClass
 {
-	@Test
+	@Test(groups = {"smoke"})
 	public void addEvent() throws IOException
 	{
 		loginpage.login(prop.getProperty("username"), prop.getProperty("password"));

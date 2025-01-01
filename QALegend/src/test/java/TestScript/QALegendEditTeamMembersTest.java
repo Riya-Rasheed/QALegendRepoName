@@ -10,7 +10,7 @@ import Utilities.FakerUtility;
 
 public class QALegendEditTeamMembersTest extends BaseClass
 {
-	@Test
+	@Test(groups = {"smoke"})
 	public void editTeamTestCases() throws IOException
 	{
 		loginpage.login(prop.getProperty("username"), prop.getProperty("password"));
