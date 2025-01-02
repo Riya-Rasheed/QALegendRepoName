@@ -109,10 +109,10 @@ public class QALegendHomePage
 	
 	
 	
-	public QALegendHomePage clickOnHomePageAnnouncementButton()
+	public void clickOnHomePageAnnouncementButton()
 	{
 		homepageAnnouncementButton.click();
-		return this;
+		
 	}
 	
 	
