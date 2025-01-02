@@ -7,20 +7,13 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="TestScript.QALegendNoteTest">
+      <class name="TestScript.QALegendAnnouncementTest">
         <methods>
           <include name="browserintialization"/>
           <include name="afterMethod"/>
-          <include name="addNoteTest"/>
+          <include name="addAnnouncement"/>
         </methods>
-      </class> <!-- TestScript.QALegendNoteTest -->
-      <class name="TestScript.QALegendItemsTest">
-        <methods>
-          <include name="browserintialization"/>
-          <include name="afterMethod"/>
-          <include name="addItem"/>
-        </methods>
-      </class> <!-- TestScript.QALegendItemsTest -->
+      </class> <!-- TestScript.QALegendAnnouncementTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
