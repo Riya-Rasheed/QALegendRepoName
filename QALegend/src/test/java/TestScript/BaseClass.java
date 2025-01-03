@@ -20,11 +20,11 @@ import PageClasses.QALegendClientsPage;
 import PageClasses.QALegendEditAnnouncementPage;
 
 import PageClasses.QALegendEditEventPage;
-import PageClasses.QALegendEditTeamMembersPage;
+
 import PageClasses.QALegendEventPage;
 import PageClasses.QALegendHomePage;
 
-import PageClasses.QALegendItemsPage;
+
 
 import PageClasses.QALegendLoginPage;
 import PageClasses.QALegendMessagePage;
@@ -45,12 +45,12 @@ public class BaseClass
 	QALegendNotePage notepage;
 	QALegendMessagePage messagepage;
 	QALegendClientsPage clientspage;
-	QALegendItemsPage itemspage;
+
 	QALegendAnnouncementsPage announcementpage;
 	
 	QALegendEditEventPage editeventpage;
 	QALegendProjectPage projectpage;
-	QALegendEditTeamMembersPage teampage;
+	
 	QALegendEditAnnouncementPage annpage;
 	QALegendTicketPage ticketpage;
 	
@@ -89,7 +89,7 @@ public class BaseClass
 		notepage = new QALegendNotePage(driver);
 		messagepage = new  QALegendMessagePage(driver);
 		clientspage = new QALegendClientsPage(driver);
-		itemspage = new QALegendItemsPage(driver);
+		
 		announcementpage = new QALegendAnnouncementsPage(driver);
 	
 		
@@ -99,7 +99,7 @@ public class BaseClass
 		editeventpage = new QALegendEditEventPage(driver);
 		
 		projectpage = new QALegendProjectPage(driver);
-		teampage = new QALegendEditTeamMembersPage(driver);
+		
 		annpage = new QALegendEditAnnouncementPage(driver);
 		ticketpage = new QALegendTicketPage(driver);
 	}
