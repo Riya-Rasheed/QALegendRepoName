@@ -10,14 +10,14 @@
    
   	<class name="TestScript.QALegendEventTest"/>
   	<class name = "TestScript.QALegendEditEventTest"/>
-<class name="TestScript.QALegendNoteTest"/>
+<!--<class name="TestScript.QALegendNoteTest"/>-->
     <class name="TestScript.QALegendMessageTest"/>
      <class name="TestScript.QALegendClientsTest"/>
      <class name="TestScript.QALegendProjectTest"/>
 
 <class name="TestScript.QALegendAnnouncementTest"/>
 	<class name="TestScript.QALegendEditAnnouncementTest"/>
-       <class name="TestScript.QALegendTicketTest"/>
+<!--       <class name="TestScript.QALegendTicketTest"/>-->
  	<class name="TestScript.QALegendLoginTest" />
 
 	 

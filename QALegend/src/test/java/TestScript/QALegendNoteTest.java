@@ -10,7 +10,7 @@ import Utilities.FakerUtility;
 
 public class QALegendNoteTest extends BaseClass
 {
-	@Test(groups = {"smoke"},retryAnalyzer = TestScript.RetryAnalyzer.class)
+	@Test(groups = {"smoke"})
 	public void addNoteTest() throws IOException 
 	{
 	loginpage.login(prop.getProperty("username"),prop.getProperty("password"));
