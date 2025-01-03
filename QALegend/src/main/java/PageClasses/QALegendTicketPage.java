@@ -57,8 +57,9 @@ public class QALegendTicketPage
 	pageutilities.javaScriptClick(addticketbutton);
 
 	}
-	public void addTicket(String title,String description,String client)
+	public void addTicket(String title,String description,String client) throws InterruptedException
 	{
+		Thread.sleep(2000);
 	pageutilities.enterText(tickettitlebox, title);
 	pageutilities.clickOnElement(ticketclientdrpdwn);
 	pageutilities.clickOnElement(clientsearchbox);
@@ -74,8 +75,9 @@ public class QALegendTicketPage
 	pageutilities.javaScriptClick(srchbox);
 	pageutilities.enterText(srchbox, title);
 	}
-	public String assignTicketToLoggedUser()
+	public String assignTicketToLoggedUser() throws InterruptedException
 	{
+		Thread.sleep(2000);
 	pageutilities.clickOnElement(action);
 	pageutilities.clickOnElement(assigntomebutton);
 	WaitUtility.waitForInVisiblityOfElement(driver, savenotificationmsg);
@@ -83,8 +85,9 @@ public class QALegendTicketPage
 	return assigneduser;
 
 	}
-	public String markTicketToClosed()
+	public String markTicketToClosed() throws InterruptedException
 	{
+		Thread.sleep(2000);
 	pageutilities.clickOnElement(action);
 	pageutilities.clickOnElement(markclosedbutton);
 	WaitUtility.waitForInVisiblityOfElement(driver, closednotificationmsg);

@@ -55,12 +55,14 @@ public class QALegendEventPage
 		pageutilities.clickOnElement(addeventButton);
 	}
 	
-	public void addEvent(String title,String description)
+	public void addEvent(String title,String description,String startdate,String enddate)
 	{
 		titleTextBox.sendKeys(title);
 		pageutilities.enterText(descriptionBox, description);
-		startdateBox.sendKeys("2024-12-30");
-		enddateBox.sendKeys("2025-01-28");
+		pageutilities.enterText(startdateBox, startdate);
+		pageutilities.EnterKeyPress();
+		pageutilities.enterText(enddateBox, enddate);
+		pageutilities.EnterKeyPress();
 //		pageutilities.clickOnElement(saveButton);
 	}
 	

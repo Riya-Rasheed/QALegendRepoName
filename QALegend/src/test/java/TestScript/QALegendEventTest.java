@@ -20,7 +20,9 @@ public class QALegendEventTest extends BaseClass
 		eventpage.clickOnAddEventButton();
 		String eventTitle = ExcelUtility.getStringData(1, 0, "Sheet1")+FakerUtility.randomNumberGenerator();
 		String eventDescription = ExcelUtility.getStringData(1, 1,"Sheet1" );
-		eventpage.addEvent(eventTitle, eventDescription);
+		String eventStartDate = "2024-12-30";
+		String eventEndDate = "2025-01-28";
+		eventpage.addEvent(eventTitle, eventDescription,eventStartDate,eventEndDate);
 		Assert.assertEquals(eventpage.eventPageSaveButtonStatusChecker(), true);
 		
 	}

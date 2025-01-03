@@ -42,12 +42,16 @@ public class QALegendAnnouncementsPage
 		pageutilities.clickOnElement(addanouncementButton);
 	}
 	
-	public void addAnnouncement(String title,String note)
+	public void addAnnouncement(String title,String note,String startdate,String enddate)
 	{
 		pageutilities.enterText(titleBox, title);
 		pageutilities.enterText(noteBox, note);
-		startdateBox.sendKeys("2024-12-26");
-		enddateBox.sendKeys("2025-01-03");
+		pageutilities.enterText(startdateBox, startdate);
+		pageutilities.EnterKeyPress();
+		pageutilities.enterText(enddateBox, enddate);
+		pageutilities.EnterKeyPress();
+//		startdateBox.sendKeys("2024-12-26");
+//		enddateBox.sendKeys("2025-01-03");
 		pageutilities.scrollToElement(saveButton);
 		
 		

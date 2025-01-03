@@ -18,7 +18,9 @@ public class QALegendAnnouncementTest extends BaseClass
 		announcementpage.clickOnAddAnnouncementButton();
 		String announcementTitle = ExcelUtility.getStringData(1, 0, "Announcements")+FakerUtility.randomNumberGenerator();
 		String announcementNote = ExcelUtility.getStringData(1, 1,"Announcements" );
-		announcementpage.addAnnouncement( announcementTitle, announcementNote);
+		String announcementStartDate = "2024-12-30";
+		String announcementEndDate = "2025=01-28";
+		announcementpage.addAnnouncement( announcementTitle, announcementNote,announcementStartDate,announcementEndDate);
 		Assert.assertEquals(announcementpage.announcementPageSendButtonChecker(), true);
 		
 	}
