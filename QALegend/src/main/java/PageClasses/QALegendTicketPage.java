@@ -57,11 +57,10 @@ public class QALegendTicketPage
 	pageutilities.javaScriptClick(addticketbutton);
 
 	}
-	public void addTicket(String title,String description,String client) throws InterruptedException
+	public void addTicket(String title,String description,String client)
 	{
 	pageutilities.enterText(tickettitlebox, title);
 	pageutilities.clickOnElement(ticketclientdrpdwn);
-	WaitUtility.waitForClickingElement(driver, clientsearchbox);
 	pageutilities.clickOnElement(clientsearchbox);
 	pageutilities.enterText(clientsearchbox, "123");
 	pageutilities.pageDownKeyPress();
@@ -71,7 +70,6 @@ public class QALegendTicketPage
 	}
 	public void searchTicketAdded(String title) throws InterruptedException
 	{
-		WaitUtility.waitForClickingElement(driver, addticketmodal);
 	WaitUtility.waitForInVisiblityOfElement(driver, addticketmodal);
 	pageutilities.javaScriptClick(srchbox);
 	pageutilities.enterText(srchbox, title);
@@ -87,7 +85,6 @@ public class QALegendTicketPage
 	}
 	public String markTicketToClosed()
 	{
-		WaitUtility.waitForClickingElement(driver, action);
 	pageutilities.clickOnElement(action);
 	pageutilities.clickOnElement(markclosedbutton);
 	WaitUtility.waitForInVisiblityOfElement(driver, closednotificationmsg);

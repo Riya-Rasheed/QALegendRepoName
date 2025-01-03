@@ -10,7 +10,7 @@ import Utilities.FakerUtility;
 
 public class QALegendTicketTest extends BaseClass
 {
-	@Test(groups = {"smoke"})
+	@Test(groups = {"smoke"},retryAnalyzer = TestScript.RetryAnalyzer.class)
 	public void verifyTicketAssignment() throws IOException, InterruptedException
 	{
 	loginpage.login(prop.getProperty("username"),prop.getProperty("password"));

@@ -15,9 +15,10 @@ public class QALegendEditAnnouncementTest extends BaseClass
 		loginpage.login(prop.getProperty("username"), prop.getProperty("password"));
 		homepage.clickOnHomePageTeamMembersButton();
 		String searchTeam = ExcelUtility.getStringData(1, 0, "TeamAnnouncement");
+		annpage.searchAnnouncement(searchTeam);
 		Assert.assertEquals(annpage.editannouncementPageSearchButtonStatusChecker(), true);
 		
-		annpage.searchAnnouncement(searchTeam);
+		
 		
 	}
 

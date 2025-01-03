@@ -16,9 +16,10 @@ public class QALegendEditTeamMembersTest extends BaseClass
 		loginpage.login(prop.getProperty("username"), prop.getProperty("password"));
 		homepage.clickOnHomePageTeamMembersButton();
 		String searchTeam = ExcelUtility.getStringData(1, 0, "TeamEdit");
+		teampage.searchTeamAdded(searchTeam);
 		Assert.assertEquals(teampage.editteamPageSearchButtonStatusChecker(), true);
 		
-		teampage.searchTeamAdded(searchTeam);
+		
 		
 	}
 
