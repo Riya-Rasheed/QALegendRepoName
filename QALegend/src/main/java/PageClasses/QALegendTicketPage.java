@@ -59,9 +59,9 @@ public class QALegendTicketPage
 	}
 	public void addTicket(String title,String description,String client) throws InterruptedException
 	{
-		Thread.sleep(2000);
 	pageutilities.enterText(tickettitlebox, title);
 	pageutilities.clickOnElement(ticketclientdrpdwn);
+	WaitUtility.waitForClickingElement(driver, clientsearchbox);
 	pageutilities.clickOnElement(clientsearchbox);
 	pageutilities.enterText(clientsearchbox, "123");
 	pageutilities.pageDownKeyPress();
@@ -71,13 +71,13 @@ public class QALegendTicketPage
 	}
 	public void searchTicketAdded(String title) throws InterruptedException
 	{
+		WaitUtility.waitForClickingElement(driver, addticketmodal);
 	WaitUtility.waitForInVisiblityOfElement(driver, addticketmodal);
 	pageutilities.javaScriptClick(srchbox);
 	pageutilities.enterText(srchbox, title);
 	}
-	public String assignTicketToLoggedUser() throws InterruptedException
+	public String assignTicketToLoggedUser()
 	{
-		Thread.sleep(2000);
 	pageutilities.clickOnElement(action);
 	pageutilities.clickOnElement(assigntomebutton);
 	WaitUtility.waitForInVisiblityOfElement(driver, savenotificationmsg);
@@ -85,9 +85,9 @@ public class QALegendTicketPage
 	return assigneduser;
 
 	}
-	public String markTicketToClosed() throws InterruptedException
+	public String markTicketToClosed()
 	{
-		Thread.sleep(2000);
+		WaitUtility.waitForClickingElement(driver, action);
 	pageutilities.clickOnElement(action);
 	pageutilities.clickOnElement(markclosedbutton);
 	WaitUtility.waitForInVisiblityOfElement(driver, closednotificationmsg);
