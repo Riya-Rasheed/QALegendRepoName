@@ -24,7 +24,6 @@ public class QALegendTicketPage
 	    WebElement clientsearchbox;
 	    @FindBy (id="description")
 	    WebElement ticketdescriptionbox;
-	    
 	    @FindBy (xpath = "//button[@class='btn btn-primary']")
 	WebElement savebtn;
 	    @FindBy (id="ajaxModalContent")
@@ -57,8 +56,9 @@ public class QALegendTicketPage
 	pageutilities.javaScriptClick(addticketbutton);
 
 	}
-	public void addTicket(String title,String description,String client) throws InterruptedException
+	public void addTicket(String title,String description,String client)
 	{
+		WaitUtility.waitForClickingElement(driver, action);
 	pageutilities.enterText(tickettitlebox, title);
 	pageutilities.clickOnElement(ticketclientdrpdwn);
 	pageutilities.clickOnElement(clientsearchbox);
@@ -66,7 +66,6 @@ public class QALegendTicketPage
 	pageutilities.pageDownKeyPress();
 	pageutilities.EnterKeyPress();
 	pageutilities.enterText(ticketdescriptionbox, description);
-	Thread.sleep(2000);
 	pageutilities.clickOnElement(savebtn);
 	}
 	public void searchTicketAdded(String title) throws InterruptedException
