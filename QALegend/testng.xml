@@ -19,7 +19,7 @@
 <!--	<class name="TestScript.QALegendEditAnnouncementTest"/>-->
 <!--       <class name="TestScript.QALegendTeamMembersTest"/>-->
 <!--       <class name="TestScript.QALegendEditTeamMembersTest"/>-->
-       <class name="TestScript.QALegendTicketTest"/>
+<!--       <class name="TestScript.QALegendTicketTest"/>-->
 <!-- 	<class name="TestScript.QALegendLoginTest" />-->
 
 	 

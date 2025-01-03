@@ -24,7 +24,7 @@ public class QALegendTicketPage
 	    WebElement clientsearchbox;
 	    @FindBy (id="description")
 	    WebElement ticketdescriptionbox;
-	    @FindBy (xpath = "//button[@type='submit']")
+	    @FindBy (xpath = "//button[@class='btn btn-primary']")
 	WebElement savebtn;
 	    @FindBy (id="ajaxModalContent")
 	    WebElement addticketmodal;
