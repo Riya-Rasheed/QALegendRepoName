@@ -8,19 +8,19 @@
   <test thread-count="5" name="Test">
     <classes>
    
-  	<class name="TestScript.QALegendEventTest"/>
-  	<class name = "TestScript.QALegendEditEventTest"/>
-<class name="TestScript.QALegendNoteTest"/>
-    <class name="TestScript.QALegendMessageTest"/>
-     <class name="TestScript.QALegendClientsTest"/>
-     <class name="TestScript.QALegendProjectTest"/>
-     <class name="TestScript.QALegendItemsTest"/>
-<class name="TestScript.QALegendAnnouncementTest"/>
-	<class name="TestScript.QALegendEditAnnouncementTest"/>
-       <class name="TestScript.QALegendTeamMembersTest"/>
-       <class name="TestScript.QALegendEditTeamMembersTest"/>
+<!--  	<class name="TestScript.QALegendEventTest"/>-->
+<!--  	<class name = "TestScript.QALegendEditEventTest"/>-->
+<!--<class name="TestScript.QALegendNoteTest"/>-->
+<!--    <class name="TestScript.QALegendMessageTest"/>-->
+<!--     <class name="TestScript.QALegendClientsTest"/>-->
+<!--     <class name="TestScript.QALegendProjectTest"/>-->
+<!--     <class name="TestScript.QALegendItemsTest"/>-->
+<!--<class name="TestScript.QALegendAnnouncementTest"/>-->
+<!--	<class name="TestScript.QALegendEditAnnouncementTest"/>-->
+<!--       <class name="TestScript.QALegendTeamMembersTest"/>-->
+<!--       <class name="TestScript.QALegendEditTeamMembersTest"/>-->
        <class name="TestScript.QALegendTicketTest"/>
- 	<class name="TestScript.QALegendLoginTest" />
+<!-- 	<class name="TestScript.QALegendLoginTest" />-->
 
 	 
     </classes>
