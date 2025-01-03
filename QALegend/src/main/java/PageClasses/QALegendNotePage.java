@@ -1,6 +1,9 @@
 package PageClasses;
 
+import java.awt.AWTException;
 import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 
 import org.openqa.selenium.WebDriver;
@@ -23,7 +26,7 @@ public class QALegendNotePage
 	WebElement notedescription;
 	@FindBy (xpath ="//button[@type='submit']")
 	WebElement savebutton;
-	@FindBy (xpath = "//button[@id='otvhqlvnyxfvmrw']")
+	@FindBy (xpath = "//button[contains(@class,'upload-file')]")
 	WebElement uploadfilebtn;
 	@FindBy(xpath = "//div[@id='s2id_note_labels']")
 	WebElement notelabel;
@@ -31,33 +34,37 @@ public class QALegendNotePage
 	WebElement searchbox;
 	@FindBy (xpath = "//a[@title='Note']")
 	WebElement note;
+	@FindBy(xpath = "//div[@id='ajaxModalContent']")
+	WebElement notemodal;
 
 	public QALegendNotePage(WebDriver driver)
 	{
-	this.driver=driver;
-	this.pageutilities=new PageUtilities(driver);
-	PageFactory.initElements(driver, this);
+		this.driver=driver;
+		this.pageutilities=new PageUtilities(driver);
+		PageFactory.initElements(driver, this);
 	}
 
 	public void clickOnAddNotebutton()
 	{
-	pageutilities.clickOnElement(addnotebutton);
+		pageutilities.clickOnElement(addnotebutton);
 	}
 
-	public void addNote(String Title,String Description)
+	public QALegendNotePage addNote(String Title,String Description,String path) throws AWTException, InterruptedException
 	{
-	pageutilities.enterText(notetitle, Title);
-	notedescription.sendKeys(Description);
-	pageutilities.clickOnElement(savebutton);
-
+		pageutilities.enterText(notetitle, Title);
+		notedescription.sendKeys(Description);
+		pageutilities.clickOnElement(uploadfilebtn);
+		fileUpload(path);
+		pageutilities.clickOnElement(savebutton);
+		return this;
 	}
 
-	public void searchNoteAdded(String notetitlenew)
+	public void searchNoteAdded(String notename)
 	{
-	    WaitUtility.waitForClickingElement(driver, searchbox);
-	searchbox.click();
-	pageutilities.enterText(searchbox, notetitlenew);
-
+		WaitUtility.waitForInVisiblityOfElement(driver, notemodal);
+		pageutilities.clickOnElement(searchbox);
+		pageutilities.enterText(searchbox, notename);
+		
 	}
 
 	public String getNoteAdded()
@@ -66,7 +73,18 @@ public class QALegendNotePage
 	return note1;
 
 	}
-	
 
+	public void fileUpload(String path) throws AWTException, InterruptedException
+	{
+		StringSelection stringselection=new StringSelection(path);
+		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringselection, null);
+		Robot robot = new Robot();
+		robot.keyPress(KeyEvent.VK_CONTROL);
+		robot.keyPress(KeyEvent.VK_V);
+		robot.keyRelease(KeyEvent.VK_V);
+		robot.keyRelease(KeyEvent.VK_CONTROL);
+		robot.keyPress(KeyEvent.VK_ENTER);
+		robot.keyRelease(KeyEvent.VK_ENTER);
+	}
 
-}
+	}
