@@ -30,7 +30,7 @@ import PageClasses.QALegendLoginPage;
 import PageClasses.QALegendMessagePage;
 import PageClasses.QALegendNotePage;
 import PageClasses.QALegendProjectPage;
-import PageClasses.QALegendTeamMembersPage;
+
 import PageClasses.QALegendTicketPage;
 
 import Utilities.ScreenshotUtility;
@@ -47,7 +47,7 @@ public class BaseClass
 	QALegendClientsPage clientspage;
 	QALegendItemsPage itemspage;
 	QALegendAnnouncementsPage announcementpage;
-	QALegendTeamMembersPage teammemberspage;
+	
 	QALegendEditEventPage editeventpage;
 	QALegendProjectPage projectpage;
 	QALegendEditTeamMembersPage teampage;
@@ -91,7 +91,7 @@ public class BaseClass
 		clientspage = new QALegendClientsPage(driver);
 		itemspage = new QALegendItemsPage(driver);
 		announcementpage = new QALegendAnnouncementsPage(driver);
-		teammemberspage = new QALegendTeamMembersPage(driver);
+	
 		
 	
 	
