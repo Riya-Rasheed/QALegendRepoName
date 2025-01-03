@@ -1,9 +1,12 @@
 package PageClasses;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import Utilities.PageUtilities;
 import Utilities.WaitUtility;
@@ -24,8 +27,9 @@ public class QALegendTicketPage
 	    WebElement clientsearchbox;
 	    @FindBy (id="description")
 	    WebElement ticketdescriptionbox;
+	    
 	    @FindBy (xpath = "//button[@class='btn btn-primary']")
-	WebElement savebtn;
+	    WebElement savebtn;
 	    @FindBy (id="ajaxModalContent")
 	    WebElement addticketmodal;
 	    @FindBy(xpath="//input[@type='search']")
@@ -58,7 +62,7 @@ public class QALegendTicketPage
 	}
 	public void addTicket(String title,String description,String client)
 	{
-		WaitUtility.waitForClickingElement(driver, action);
+	WaitUtility.waitForClickingElement(driver, addticketbutton);	
 	pageutilities.enterText(tickettitlebox, title);
 	pageutilities.clickOnElement(ticketclientdrpdwn);
 	pageutilities.clickOnElement(clientsearchbox);
