@@ -1,35 +1,154 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="0" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-01-03T09:49:05 IST" name="Suite" finished-at="2025-01-03T09:49:10 IST" duration-ms="5026">
+  <suite started-at="2025-01-03T11:19:36 IST" name="Suite" finished-at="2025-01-03T11:20:24 IST" duration-ms="47150">
     <groups>
       <group name="smoke">
-        <method signature="QALegendAnnouncementTest.addAnnouncement()[pri:0, instance:TestScript.QALegendAnnouncementTest@3e6f3f28]" name="addAnnouncement" class="TestScript.QALegendAnnouncementTest"/>
+        <method signature="QALegendTicketTest.verifyTicketAssignment()[pri:0, instance:TestScript.QALegendTicketTest@7e19ebf0]" name="verifyTicketAssignment" class="TestScript.QALegendTicketTest"/>
       </group> <!-- smoke -->
     </groups>
-    <test started-at="2025-01-03T09:49:05 IST" name="Test" finished-at="2025-01-03T09:49:10 IST" duration-ms="5026">
-      <class name="TestScript.QALegendAnnouncementTest">
-        <test-method is-config="true" signature="browserintialization()[pri:0, instance:TestScript.QALegendAnnouncementTest@3e6f3f28]" started-at="2025-01-03T09:49:05 IST" name="browserintialization" finished-at="2025-01-03T09:49:06 IST" duration-ms="1850" status="PASS">
+    <test started-at="2025-01-03T11:19:36 IST" name="Test" finished-at="2025-01-03T11:20:24 IST" duration-ms="47150">
+      <class name="TestScript.QALegendTicketTest">
+        <test-method is-config="true" signature="browserintialization()[pri:0, instance:TestScript.QALegendTicketTest@7e19ebf0]" started-at="2025-01-03T11:19:36 IST" name="browserintialization" finished-at="2025-01-03T11:19:39 IST" duration-ms="2285" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserintialization -->
-        <test-method signature="addAnnouncement()[pri:0, instance:TestScript.QALegendAnnouncementTest@3e6f3f28]" started-at="2025-01-03T09:49:06 IST" name="addAnnouncement" finished-at="2025-01-03T09:49:09 IST" duration-ms="3018" status="PASS">
+        <test-method signature="verifyTicketAssignment()[pri:0, instance:TestScript.QALegendTicketTest@7e19ebf0]" started-at="2025-01-03T11:19:39 IST" name="verifyTicketAssignment" finished-at="2025-01-03T11:20:00 IST" duration-ms="21614" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on windows (07a1d4a476a9712c0b56281bed4cc3f1)] -> xpath: //a[@title='Add ticket']] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.205, chrome: {chromedriverVersion: 131.0.6778.204 (52183f9e99a..., userDataDir: C:\Users\hanzh\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61092}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61092/devtoo..., se:cdpVersion: 131.0.6778.205, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 07a1d4a476a9712c0b56281bed4cc3f1]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on windows (07a1d4a476a9712c0b56281bed4cc3f1)] -> xpath: //a[@title='Add ticket']] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.205, chrome: {chromedriverVersion: 131.0.6778.204 (52183f9e99a..., userDataDir: C:\Users\hanzh\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61092}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61092/devtoo..., se:cdpVersion: 131.0.6778.205, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 07a1d4a476a9712c0b56281bed4cc3f1
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at Utilities.WaitUtility.waitForClickingElement(WaitUtility.java:17)
+at PageClasses.QALegendTicketPage.addTicket(QALegendTicketPage.java:65)
+at TestScript.QALegendTicketTest.verifyTicketAssignment(QALegendTicketTest.java:23)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addAnnouncement -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:TestScript.QALegendAnnouncementTest@3e6f3f28]" started-at="2025-01-03T09:49:10 IST" name="afterMethod" finished-at="2025-01-03T09:49:10 IST" duration-ms="122" status="PASS">
+        </test-method> <!-- verifyTicketAssignment -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:TestScript.QALegendTicketTest@7e19ebf0]" started-at="2025-01-03T11:20:00 IST" name="afterMethod" finished-at="2025-01-03T11:20:01 IST" duration-ms="264" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=addAnnouncement status=SUCCESS method=QALegendAnnouncementTest.addAnnouncement()[pri:0, instance:TestScript.QALegendAnnouncementTest@3e6f3f28] output={null}]]]>
+                <![CDATA[[TestResult name=verifyTicketAssignment status=FAILURE method=QALegendTicketTest.verifyTicketAssignment()[pri:0, instance:TestScript.QALegendTicketTest@7e19ebf0] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- TestScript.QALegendAnnouncementTest -->
+        <test-method is-config="true" signature="browserintialization()[pri:0, instance:TestScript.QALegendTicketTest@7e19ebf0]" started-at="2025-01-03T11:20:01 IST" name="browserintialization" finished-at="2025-01-03T11:20:02 IST" duration-ms="1584" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserintialization -->
+        <test-method signature="verifyTicketMarkedAsClosed()[pri:0, instance:TestScript.QALegendTicketTest@7e19ebf0]" started-at="2025-01-03T11:20:02 IST" name="verifyTicketMarkedAsClosed" finished-at="2025-01-03T11:20:23 IST" duration-ms="21128" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on windows (c7e6b1b04443360b075cda7aab6e1981)] -> xpath: //a[@title='Add ticket']] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.205, chrome: {chromedriverVersion: 131.0.6778.204 (52183f9e99a..., userDataDir: C:\Users\hanzh\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61129}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61129/devtoo..., se:cdpVersion: 131.0.6778.205, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c7e6b1b04443360b075cda7aab6e1981]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on windows (c7e6b1b04443360b075cda7aab6e1981)] -> xpath: //a[@title='Add ticket']] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.205, chrome: {chromedriverVersion: 131.0.6778.204 (52183f9e99a..., userDataDir: C:\Users\hanzh\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61129}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61129/devtoo..., se:cdpVersion: 131.0.6778.205, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c7e6b1b04443360b075cda7aab6e1981
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at Utilities.WaitUtility.waitForClickingElement(WaitUtility.java:17)
+at PageClasses.QALegendTicketPage.addTicket(QALegendTicketPage.java:65)
+at TestScript.QALegendTicketTest.verifyTicketMarkedAsClosed(QALegendTicketTest.java:38)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTicketMarkedAsClosed -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:TestScript.QALegendTicketTest@7e19ebf0]" started-at="2025-01-03T11:20:23 IST" name="afterMethod" finished-at="2025-01-03T11:20:24 IST" duration-ms="238" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyTicketMarkedAsClosed status=FAILURE method=QALegendTicketTest.verifyTicketMarkedAsClosed()[pri:0, instance:TestScript.QALegendTicketTest@7e19ebf0] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- TestScript.QALegendTicketTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>
