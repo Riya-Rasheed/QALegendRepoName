@@ -63,7 +63,7 @@ public class QALegendEventPage
 		pageutilities.EnterKeyPress();
 		pageutilities.enterText(enddateBox, enddate);
 		pageutilities.EnterKeyPress();
-//		pageutilities.clickOnElement(saveButton);
+
 	}
 	
 	public boolean eventPageSaveButtonStatusChecker() 

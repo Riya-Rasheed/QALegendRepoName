@@ -233,6 +233,23 @@ public class PageUtilities
 		
 	}
 	
-	 
+	public void javascriptScrollElementToView(WebElement element)
+	{
+		JavascriptExecutor jsc=(JavascriptExecutor)driver;
+		jsc.executeScript("arguments[0].scrollIntoView(true);",element);
+	}
+	
+	public void selectCheckbox(WebElement checkbox)
+	{
+		if (!checkbox.isSelected())
+		{
+		checkbox.click();
+		}
+	}
+	
+	public void clearTextField(WebElement element)
+	{
+		element.clear();
+	}
 	 
 }

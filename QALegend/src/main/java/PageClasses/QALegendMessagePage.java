@@ -28,13 +28,17 @@ public class QALegendMessagePage
 	@FindBy (name="subject")
 	WebElement subjectbox;
 	@FindBy (xpath = "//textarea[@name='message']")
-	WebElement messagetextarea;
+	WebElement messagetext;
 	@FindBy (xpath ="//button[@type='submit']")
 	WebElement sendbutton;
 	@FindBy (xpath = "(//a[starts-with(@class,'list-group-item')])[3]")
 	WebElement sentitems;
 	@FindBy (id="search-messages")
 	WebElement searchtxtbox;
+	@FindBy (xpath = "//div[@class='media-body']")
+	WebElement emailbody;
+	@FindBy (xpath = ("//p[@class='pt5 pb10 b-b']//following::p"))
+	WebElement emailmessage;	
 	
 	public void addMessage(String mailid,String subject,String msg)
 	{
@@ -43,28 +47,23 @@ public class QALegendMessagePage
 		pageutilities.enterText(Tomailldsearchbox, mailid);
 		pageutilities.EnterKeyPress();
 		pageutilities.enterText(subjectbox, subject);
-		pageutilities.enterText(messagetextarea, msg);
+		pageutilities.enterText(messagetext, msg);
 		pageutilities.clickOnElement(sendbutton);
 		
 	}	
 	
-	public boolean messagePageSearchButtonStatusChecker() 
-	{
-		
-		return(pageutilities.isElementEnabled(searchtxtbox));
-	}
-	
-//	public void sendButton()
-//	{
-//		pageutilities.clickOnElement(sendbutton);
-//	}
-	
-	public void getMessageOnSentItems(String str) throws InterruptedException
+	public QALegendMessagePage getMessageOnSentItems(String str) throws InterruptedException
 	{
 		pageutilities.javaScriptClick(sentitems);
 		searchtxtbox.sendKeys(str);
+		return this;
 	}
-
+	
+	public String getMessageAdded()
+	{
+		pageutilities.clickOnElement(emailbody);
+		String sub=pageutilities.readText(emailmessage);
+		return sub;
+	}
+	
 }
-
-

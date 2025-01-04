@@ -10,7 +10,7 @@ import Utilities.FakerUtility;
 
 public class QALegendTicketTest extends BaseClass
 {
-	@Test 
+	@Test (groups = {"smoke"},retryAnalyzer = TestScript.RetryAnalyzer.class)
 	public void verifyTicketAssignment() throws IOException, InterruptedException
 	{
 		loginpage.login(prop.getProperty("username"),prop.getProperty("password"));
@@ -19,13 +19,13 @@ public class QALegendTicketTest extends BaseClass
 		ticketpage.clickOnAddTicketButton();
 		String tickettitle =ExcelUtility.getStringData(1, 0,"Tickets")+FakerUtility.randomNumberGenerator();
 		String ticketdescription=ExcelUtility.getStringData(1, 1,"Tickets");
-		String clientname=ExcelUtility.getStringData(1, 2,"Tickets");
+		String clientname=ExcelUtility.getNumericData(1, 2,"Tickets");
 		ticketpage.addTicket(tickettitle, ticketdescription,clientname);
 		ticketpage.searchTicketAdded(tickettitle);
 		String assigneduser=ticketpage.assignTicketToLoggedUser();
 		Assert.assertEquals(assigneduser,loggeduser);
 	}
-	@Test
+	@Test(groups = {"smoke"},retryAnalyzer = TestScript.RetryAnalyzer.class)
 	public void verifyTicketMarkedAsClosed() throws IOException, InterruptedException
 	{
 		loginpage.login(prop.getProperty("username"),prop.getProperty("password"));
@@ -33,7 +33,7 @@ public class QALegendTicketTest extends BaseClass
 		ticketpage.clickOnAddTicketButton();
 		String tickettitle =ExcelUtility.getStringData(1, 0,"Tickets")+FakerUtility.randomNumberGenerator();
 		String ticketdescription=ExcelUtility.getStringData(1, 1,"Tickets");
-		String clientname=ExcelUtility.getStringData(1, 2,"Tickets");
+		String clientname=ExcelUtility.getNumericData(1, 2,"Tickets");
 		ticketpage.addTicket(tickettitle, ticketdescription,clientname);
 		ticketpage.searchTicketAdded(tickettitle);
 		String Status=ticketpage.markTicketToClosed();
