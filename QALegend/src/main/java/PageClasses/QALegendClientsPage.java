@@ -6,85 +6,99 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import Utilities.PageUtilities;
-import Utilities.WaitUtility;
 
 public class QALegendClientsPage 
 {
-	
 	public WebDriver driver;
 	public PageUtilities pageutilities;
-	@FindBy (xpath = "//a[@title='Add client']")
-	WebElement addclientbutton;
-	@FindBy (id="company_name")
-	WebElement companynamebox;
-	@FindBy (name="address")
-	WebElement address;
-	@FindBy (id="city")
-	WebElement City;
-	@FindBy (id="state")
-	WebElement State;
-	@FindBy (id="country")
-	WebElement Country;
-	@FindBy (name="phone")
-	WebElement Phone;
-	@FindBy (id="disable_online_payment")
-	WebElement disableonlinepaymentcheckbox;
-	@FindBy (xpath = "//button[@type='submit']")
-	WebElement savebutton;
-	@FindBy (xpath = "//input[@type='search']")
-	WebElement searchbox;
-	@FindBy (id="ajaxModalContent")
-	WebElement addclientmodal;
-	@FindBy (xpath = "(//table[@id='client-table']//descendant::a)[1]")
-	WebElement companyname;
-	@FindBy (xpath="//a[@title='Edit client']")
-	WebElement editclientbutton;
+	@FindBy(xpath = "//a[@title='Add client']")
+	WebElement addclientButton;
+	@FindBy(id="company_name")
+	WebElement companynameTextBox;
+	@FindBy(id="address")
+	WebElement addressTextBox;
+	@FindBy(id = "city")
+	WebElement cityTextBox;
+	@FindBy(id = "state")
+	WebElement stateTextBox;
+	@FindBy(id = "zip")
+	WebElement zipTextBox;
+	@FindBy(id = "country")
+	WebElement countryTextBox;
+	@FindBy(id = "phone")
+	WebElement phoneTextBox;
+	@FindBy(id = "website")
+	WebElement websiteTextBox;
+	@FindBy(id = "vat_number")
+	WebElement vatnumberTextBox;
+	@FindBy(id = "s2id_autogen6")
+	WebElement clientgroupsTextBox;
+	@FindBy(id = "s2id_autogen5_search")
+	WebElement currencyTextBox;
+	@FindBy(id = "currency_symbol")
+	WebElement currencysymbolTextBox;
+	@FindBy(id = "disable_online_payment")
+	WebElement disableonlinepaymentCheckBox;
+	@FindBy(xpath = "//button[@class='btn btn-primary']")
+	WebElement saveButton;
+	@FindBy(xpath = "(//button[@class='btn btn-default'])[2]")
+	WebElement closeButton;
+	@FindBy(xpath = "//input[@type='search']")
+	WebElement searchButton;
+	@FindBy(xpath = "//tr[@role='row']//following::a")
+	WebElement firstRowAfterSearch;
 	
+
+
+	
+
 	public QALegendClientsPage(WebDriver driver) 
 	{
-		this.driver=driver;
-		this.pageutilities=new PageUtilities(driver);
+		this.driver = driver;
+		this.pageutilities = new PageUtilities(driver);
 		PageFactory.initElements(driver, this);
 	}
-	public void clickOnAddClientButton() 
-	{
-		pageutilities.clickOnElement(addclientbutton);
-	}
-	public QALegendClientsPage addClient(String company,String addr,String city,String state,String country,String phone,String currency) throws InterruptedException
-	{
-		pageutilities.enterText(companynamebox,company);
-		pageutilities.enterText(address,addr);
-		pageutilities.enterText(City,city);
-		pageutilities.enterText(State,state);
-		pageutilities.enterText(Country,country);
-		Phone.sendKeys(phone);
-		pageutilities.javascriptScrollElementToView(disableonlinepaymentcheckbox);
-		pageutilities.selectCheckbox(disableonlinepaymentcheckbox);
-		pageutilities.clickOnElement(savebutton);
-		return this;
-	}
+
+
+
+
+	public void clickOnAddClientsButton() 
 	
-	public String searchForAddedClient(String comp) throws InterruptedException
+		{
+			addclientButton.click();
+		}
+		
+		
+	
+
+
+
+
+	public void addClients(String company, String clientsaddress,String city,String state) 
 	{
-		WaitUtility.waitForInVisiblityOfElement(driver, addclientmodal);
-		pageutilities.javaScriptClick(searchbox);
-		pageutilities.enterText(searchbox,comp);
-		String client1=pageutilities.readText(companyname);
-		return client1;
+		
+		pageutilities.enterText(companynameTextBox,company);
+		pageutilities.enterText(addressTextBox,clientsaddress);
+		pageutilities.enterText(cityTextBox, city);
+		pageutilities.enterText(stateTextBox, state);
+		pageutilities.clickOnElement(saveButton);
+	}
+
+
+
+	public String verifyAddedClient(String company) throws InterruptedException
+	{
+		Thread.sleep(2000);
+		searchButton.click();
+		searchButton.sendKeys(company);
+		//pageutilities.EnterKeyPress();
+		return firstRowAfterSearch.getText();
 		
 	}
-	public String editNoteAdded(String addr)
-	{
-		pageutilities.clickOnElement(editclientbutton);
-		pageutilities.clearTextField(address);
-		pageutilities.enterText(address, addr);
-		pageutilities.clickOnElement(savebutton);
-		WaitUtility.waitForInVisiblityOfElement(driver, addclientmodal);
-		pageutilities.clickOnElement(editclientbutton);
-		String editedaddress=pageutilities.readText(address);
-		System.out.println(editedaddress);
-		return editedaddress;
-		
-	}
+
+	
+	
+	
+	
 
 }
